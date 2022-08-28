@@ -10,10 +10,14 @@
 ```
 - 2- to create new docker image up and running from terminal cd to project folder then write
 ```bash
-   composer install && ./vendor/bin/sail up
+   cd excercise-blackstone && composer install && ./vendor/bin/sail up
 ```
-- 3- Open a new terminal then cd to project folder and write the following :
+- 3- OPEN NEW TERMINAL then cd to project folder and run the following :
 ```bash
-     ./vendor/bin/sail artisan migrate:refresh --seed && yarn install && yarn dev
+     ./vendor/bin/sail artisan migrate:refresh --seed
 ```
-- 4- open a browser then navigate to http://localhost:8000
+- 3- within the project folder install and build your dev
+```bash
+     yarn install && yarn dev
+```
+- 4- open a browser then navigate to http://localhost:8000 as requested.
