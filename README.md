@@ -14,6 +14,6 @@
 ```
 - 3- Open a new terminal then cd to project folder and write the following :
 ```bash
-     ./vendor/bin/sail artisan migrate:refresh --seed && yarn dev
+     ./vendor/bin/sail artisan migrate:refresh --seed && yarn install && yarn dev
 ```
 - 4- open a browser then navigate to http://localhost:8000
