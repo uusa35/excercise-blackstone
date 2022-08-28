@@ -21,5 +21,5 @@
      yarn install && yarn dev
 ```
 - Open a browser then navigate to http://localhost:8000 as requested.
-<p align="center"><a href="#" target="_blank"><img src="https://i.ibb.co/fCSYMTv/Screen-Shot-2022-08-28-at-7-32-22-PM.png" width="400" alt="screenshot"></a></p>
+<p align="center"><a href="#" target="_blank"><img src="https://i.ibb.co/fCSYMTv/Screen-Shot-2022-08-28-at-7-32-22-PM.png" width="900" alt="screenshot"></a></p>
   
