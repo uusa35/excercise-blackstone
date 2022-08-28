@@ -8,16 +8,16 @@
 ```bash
    git clone https://github.com/uusa35/excercise-blackstone.git
 ```
-- 2- to create new docker image up and running from terminal 
+2- to create new docker image up and running from terminal 
 ```bash
    cd excercise-blackstone && composer install && ./vendor/bin/sail up
 ```
-- 3- OPEN NEW TERMINAL then cd to project folder and run the following :
+3- OPEN NEW TERMINAL then cd to project folder and run the following :
 ```bash
      ./vendor/bin/sail artisan migrate:refresh --seed
 ```
-- 3- within the project folder install and build your dev
+4- within the project folder install and build your dev
 ```bash
      yarn install && yarn dev
 ```
-- 4- open a browser then navigate to http://localhost:8000 as requested.
+- Open a browser then navigate to http://localhost:8000 as requested.
