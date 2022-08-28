@@ -4,10 +4,16 @@
 
 
 ## Instructions
-
-- 1- Open new terminal
-- 2- cd to project folder and write ./vendor/bin/sail up
-- 3- Open a new terminal and cd to project folder then write the following :
-  - ./vendor/bin/sail artisan migrate:refresh --seed
-  - yarn dev
-  - open a browser then navigate to http://localhost:8000
+1- Clone the repo
+```bash
+   git clone https://github.com/uusa35/excercise-blackstone.git
+```
+- 2- to create new docker image up and running from terminal cd to project folder then write
+```bash
+   composer install && ./vendor/bin/sail up
+```
+- 3- Open a new terminal then cd to project folder and write the following :
+```bash
+     ./vendor/bin/sail artisan migrate:refresh --seed && yarn dev
+```
+- 4- open a browser then navigate to http://localhost:8000
