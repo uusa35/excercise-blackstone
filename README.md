@@ -18,7 +18,7 @@
 ```
 4- within the project folder install and build your dev
 ```bash
-     yarn install && yarn dev
+     yarn install && yarn build
 ```
 - Open a browser then navigate to http://localhost:8000 as requested.
 <p align="center"><a href="#" target="_blank"><img src="https://i.ibb.co/fCSYMTv/Screen-Shot-2022-08-28-at-7-32-22-PM.png" width="900" alt="screenshot"></a></p>
