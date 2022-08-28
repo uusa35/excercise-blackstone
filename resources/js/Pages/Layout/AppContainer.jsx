@@ -1,5 +1,5 @@
 import {Head, Link} from "@inertiajs/inertia-react";
-import React, {useState} from "react";
+import React from "react";
 import {InformationCircleIcon} from '@heroicons/react/20/solid'
 
 const AppContainer = ({props, children}) => {
@@ -15,7 +15,7 @@ const AppContainer = ({props, children}) => {
                 <Link href={route('product.index')} className="mx-4 text-sm text-gray-900 dark:text-white underline">
                     Task (One)
                 </Link>
-                <Link href={route('problem.solving')}
+                <Link href={route('problem.solving.index')}
                       className="mx-4 text-sm text-gray-900 dark:text-white underline">
                     Task (Two)
                 </Link>

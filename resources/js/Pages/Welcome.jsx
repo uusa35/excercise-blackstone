@@ -48,7 +48,7 @@ export default function Welcome(props) {
 
                         <div className="ml-4 text-lg leading-7 font-semibold">
                             <Link
-                                href={route('problem.solving')}
+                                href={route('problem.solving.index')}
                                 className="underline text-gray-900 dark:text-white"
                             >
                                 Exercise Two (2)

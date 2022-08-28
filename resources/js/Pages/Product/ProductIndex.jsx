@@ -5,8 +5,6 @@ import {useForm} from "@inertiajs/inertia-react";
 
 const ProductIndex = (props) => {
     const {elements} = props;
-    console.log('elements', elements);
-    console.log('props', props);
     const {data, submit, setData, delete: destroy} = useForm({
         id: ''
     })

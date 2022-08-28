@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ProblemSolvingController;
 use App\Http\Controllers\ProductController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
@@ -26,7 +27,9 @@ Route::get('/', function () {
 })->name('home');
 
 Route::resource('product', ProductController::class);
-Route::get('problem-solving', fn() => Inertia::render('ProblemSolving'))->name('problem.solving');
+Route::get('problem-solving', [ProblemSolvingController::class, 'index'])->name('problem.solving.index');
+Route::post('problem-solving', [ProblemSolvingController::class, 'store'])->name('problem.solving.store');
+Route::get('problem-solving-reset', [ProblemSolvingController::class, 'reset'])->name('problem.solving.reset');
 Route::get('change-mode', function () {
     session()->put('mode', request()->mode);
     return redirect()->back();
