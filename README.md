@@ -8,7 +8,7 @@
 ```bash
    git clone https://github.com/uusa35/excercise-blackstone.git
 ```
-- 2- to create new docker image up and running from terminal cd to project folder then write
+- 2- to create new docker image up and running from terminal 
 ```bash
    cd excercise-blackstone && composer install && ./vendor/bin/sail up
 ```
