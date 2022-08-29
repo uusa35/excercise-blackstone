@@ -3,7 +3,7 @@ import {Link, useForm} from "@inertiajs/inertia-react";
 
 const ProductEdit = (props) => {
     const { product } = props;
-    const {data, put, setData, delete: destroy} = useForm({
+    const {data, put, setData} = useForm({
         id : product.id,
         name: product.name,
         price: product.price,

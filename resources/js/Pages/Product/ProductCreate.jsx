@@ -2,7 +2,7 @@ import AppContainer from "@/Pages/Layout/AppContainer";
 import {Link, useForm} from "@inertiajs/inertia-react";
 
 const ProductCreate = (props) => {
-    const {data, post, setData, delete: destroy} = useForm({
+    const {data, post, setData} = useForm({
         name: '',
         price: '',
         qty: '',

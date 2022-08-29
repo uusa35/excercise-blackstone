@@ -1,5 +1,5 @@
 import React from 'react';
-import {Link, Head} from '@inertiajs/inertia-react';
+import {Link} from '@inertiajs/inertia-react';
 import AppContainer from "@/Pages/Layout/AppContainer";
 
 export default function Welcome(props) {
