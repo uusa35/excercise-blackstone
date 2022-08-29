@@ -14,7 +14,7 @@
 ```
 3- OPEN NEW TERMINAL then cd to project folder and run the following :
 ```bash
-     ./vendor/bin/sail artisan migrate:refresh --seed
+     ./vendor/bin/sail artisan migrate:refresh --seed && ./vendor/bin/sail artisan storage:link
 ```
 4- within the project folder install and build your dev
 ```bash
