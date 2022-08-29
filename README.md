@@ -20,7 +20,7 @@
 ```bash
      yarn install && yarn build
 ```
-- Open a browser then navigate to http://localhost:8000 as requested.
+- Open a browser then navigate to http://localhost:8080 as requested.
 
 # Task (1) : E2E Application Development
 <p align="center"><a href="#" target="_blank"><img src="https://i.ibb.co/fCSYMTv/Screen-Shot-2022-08-28-at-7-32-22-PM.png" alt="screenshot"></a></p>
