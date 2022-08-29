@@ -21,5 +21,12 @@
      yarn install && yarn build
 ```
 - Open a browser then navigate to http://localhost:8000 as requested.
-<p align="center"><a href="#" target="_blank"><img src="https://i.ibb.co/fCSYMTv/Screen-Shot-2022-08-28-at-7-32-22-PM.png" width="900" alt="screenshot"></a></p>
+
+# Task (1) : E2E Application Development
+<p align="center"><a href="#" target="_blank"><img src="https://i.ibb.co/fCSYMTv/Screen-Shot-2022-08-28-at-7-32-22-PM.png" alt="screenshot"></a></p>
+
+## Task (2) : Problem Solving Case
+<p align="center">
+<a href="https://ibb.co/w4xHxQc"><img src="https://i.ibb.co/5LfDfjK/Screen-Shot-2022-08-29-at-9-45-15-AM.png" alt="Screen-Shot-2022-08-29-at-9-45-15-AM" border="0"></a>
+</p>
   
