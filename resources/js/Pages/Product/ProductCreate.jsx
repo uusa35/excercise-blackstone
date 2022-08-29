@@ -1,5 +1,6 @@
 import AppContainer from "@/Pages/Layout/AppContainer";
 import {Link, useForm} from "@inertiajs/inertia-react";
+import {useCallback} from "react";
 
 const ProductCreate = (props) => {
     const {data, post, setData} = useForm({
@@ -9,12 +10,12 @@ const ProductCreate = (props) => {
         brand: 'BOSS'
     })
 
-    const handleChange = (e) => {
+    const handleChange = useCallback((e) => {
         setData(values => ({
             ...values,
             [e.target.id]: e.target.value,
         }))
-    }
+    })
 
     const submit = (e) => {
         e.preventDefault();
@@ -113,7 +114,7 @@ const ProductCreate = (props) => {
                                                         className="mt-1 text-black text-green-600 block w-full py-2 px-3 border border-gray-300  rounded-md shadow-sm focus:outline-none focus:ring-gray-500 focus:border-gray-500 sm:text-sm"
                                                     >
                                                         <option value={`Calvin Klein`}>Calvin Klein</option>
-                                                        <option  selected value={`BOSS`}>BOSS</option>
+                                                        <option value={`BOSS`}>BOSS</option>
                                                         <option value={`Gucci`}>Gucci</option>
                                                         <option value={`Samsung`}>Samsung</option>
                                                         <option value={`Apple`}>Apple</option>
