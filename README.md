@@ -22,6 +22,10 @@
 ```
 - Open a browser then navigate to http://localhost:8080 as requested.
 
+
+# Home Page
+<p align="center"><a href="https://ibb.co/Xb4cM58"><img src="https://i.ibb.co/yXRH7kS/Screen-Shot-2022-08-29-at-10-51-15-AM.png" alt="Screen-Shot-2022-08-29-at-10-51-15-AM" border="0"></a></p>
+
 # Task (1) : E2E Application Development
 <p align="center"><a href="#" target="_blank"><img src="https://i.ibb.co/fCSYMTv/Screen-Shot-2022-08-28-at-7-32-22-PM.png" alt="screenshot"></a></p>
 
