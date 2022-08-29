@@ -50,7 +50,7 @@ class ProblemSolvingController extends Controller
             session()->put('order', $order);
             return redirect()->route('problem.solving.index')->with(['success' => 'File Uploaded']);
         } catch (\Exception $e) {
-            return redirect()->route('problem.solving.index')->with(['error' => 'File uploaded is inappropriate with the template given.']);
+            return redirect()->route('problem.solving.index')->with(['error' => 'File uploaded is inappropriate according to the template given.']);
         }
     }
 
@@ -63,6 +63,5 @@ class ProblemSolvingController extends Controller
     public function download($fileName)
     {
         return Storage::download('public/orders/'.$fileName);
-//        return (response(storage_path('public/orders/' . $fileName), 200))->header('Content-Type', 'txt/csv');
     }
 }
