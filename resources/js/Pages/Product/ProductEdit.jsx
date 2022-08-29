@@ -1,6 +1,5 @@
 import AppContainer from "@/Pages/Layout/AppContainer";
 import {Link, useForm} from "@inertiajs/inertia-react";
-import {useCallback} from "react";
 
 const ProductEdit = (props) => {
     const { product } = props;
@@ -12,12 +11,12 @@ const ProductEdit = (props) => {
         brand: product.brand
     })
 
-    const handleChange = useCallback((e) => {
+    const handleChange = (e) => {
         setData(values => ({
             ...values,
             [e.target.id]: e.target.value,
         }))
-    })
+    }
 
     const submit = (e) => {
         e.preventDefault();
