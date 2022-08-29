@@ -2,7 +2,6 @@ import AppContainer from "@/Pages/Layout/AppContainer";
 import {Link, useForm} from "@inertiajs/inertia-react";
 
 const ProblemSolvingIndex = (props) => {
-    console.log('props', props);
     const {data, post, setData, reset} = useForm({
         file: ''
     })
@@ -40,11 +39,84 @@ const ProblemSolvingIndex = (props) => {
                         <div className="overflow-hidden shadow ring-1 ring-opacity-5 md:rounded-lg">
                             <div className=" shadow px-4 py-5 sm:rounded-lg sm:p-6">
                                 {
-                                    props.elements ?
+                                    props.order && props.order.element ?
                                         <div className="inline-block min-w-full py-2 align-middle md:px-6 lg:px-8">
+                                            <div
+                                                className="grid grid-cols-1 md:grid-cols-1 border rounded-md border-gray-200 ">
+                                                <div className="flex items-center mb-4">
+                                                    <div className="sm:flex-auto">
+                                                        <h1 className="text-xl my-2 text-center font-semibold ">Click to download files generated</h1>
+                                                    </div>
+                                                </div>
+                                                <div className="p-6">
+                                                    <div className="flex items-center">
+                                                        <svg
+                                                            fill="none"
+                                                            stroke="currentColor"
+                                                            strokeLinecap="round"
+                                                            strokeLinejoin="round"
+                                                            strokeWidth="2"
+                                                            viewBox="0 0 24 24"
+                                                            className="w-8 h-8 text-gray-500"
+                                                        >
+                                                            <path
+                                                                d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                                                        </svg>
+                                                        <div className="ml-4 text-lg leading-7 font-semibold">
+                                                            <a
+                                                                target={`_blank`}
+                                                                download
+                                                                href={route('problem.solving.download', props.order.firstFile)}
+                                                            >
+                                                                {props.order.firstFile} (Download)</a>
+                                                        </div>
+                                                    </div>
+
+                                                    <div className="ml-12">
+                                                        <p className="mt-2 text-gray-600 dark:text-gray-400 text-sm whitespace-pre-line">
+                                                            {props.order.firstContent}
+                                                        </p>
+                                                    </div>
+                                                </div>
+
+                                                <div className="p-6">
+                                                    <div className="flex items-center">
+                                                        <svg
+                                                            fill="none"
+                                                            stroke="currentColor"
+                                                            strokeLinecap="round"
+                                                            strokeLinejoin="round"
+                                                            strokeWidth="2"
+                                                            viewBox="0 0 24 24"
+                                                            className="w-8 h-8 text-gray-500"
+                                                        >
+                                                            <path
+                                                                d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                                                        </svg>
+                                                        <div className="ml-4 text-lg leading-7 font-semibold">
+                                                            <a
+                                                                target={`_blank`}
+                                                                download
+                                                                href={route('problem.solving.download', props.order.secondFile)}
+                                                            >
+                                                                {props.order.secondFile} (Download)</a>
+                                                        </div>
+                                                    </div>
+
+                                                    <div className="ml-12">
+                                                        <p className="mt-2 text-gray-600 dark:text-gray-400 text-sm whitespace-pre-line">
+                                                            {`${props.order.secondContent}`}
+                                                        </p>
+                                                    </div>
+                                                </div>
+
+                                            </div>
                                             <div className="flex items-center mb-4">
                                                 <div className="sm:flex-auto">
-                                                    <h1 className="text-xl text-center font-semibold ">File Name : {props.elements[0]['order_name']}</h1>
+                                                    <h1 className="text-xl my-2 text-center font-semibold ">File Name
+                                                        : {props.order.element[0]['order_name']}</h1>
+                                                    <h1 className="text-xl text-center font-semibold ">Order
+                                                        Details</h1>
                                                 </div>
                                             </div>
                                             <div
@@ -76,15 +148,15 @@ const ProblemSolvingIndex = (props) => {
                                                     </thead>
                                                     <tbody
                                                         className="divide-y divide-gray-200 bg-white dark:bg-gray-900">
-                                                    {props.elements.map((element) => (
-                                                        <tr key={element.id}>
-                                                            <td className="whitespace-nowrap px-3 py-4 text-sm ">{element.id}</td>
+                                                    {props.order.element.map((item) => (
+                                                        <tr key={item.id}>
+                                                            <td className="whitespace-nowrap px-3 py-4 text-sm ">{item.id}</td>
                                                             <td className="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium  sm:pl-6">
-                                                                {element.area}
+                                                                {item.area}
                                                             </td>
-                                                            <td className="whitespace-nowrap px-3 py-4 text-sm ">{element.name}</td>
-                                                            <td className="whitespace-nowrap px-3 py-4 text-sm ">{element.qty}</td>
-                                                            <td className="whitespace-nowrap px-3 py-4 text-sm ">{element.brand}</td>
+                                                            <td className="whitespace-nowrap px-3 py-4 text-sm ">{item.product_name}</td>
+                                                            <td className="whitespace-nowrap px-3 py-4 text-sm ">{item.qty}</td>
+                                                            <td className="whitespace-nowrap px-3 py-4 text-sm ">{item.brand}</td>
                                                         </tr>
                                                     ))}
                                                     </tbody>
@@ -95,7 +167,7 @@ const ProblemSolvingIndex = (props) => {
                                                     href={route('problem.solving.reset')}
                                                     className="text-white inline-flex items-center justify-center rounded-md border border-transparent bg-red-600 px-4 py-2 text-sm font-medium  shadow-sm hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 sm:w-auto"
                                                 >
-                                                    Reset
+                                                    Reset & Upload another
                                                 </Link>
                                             </div>
                                         </div> :

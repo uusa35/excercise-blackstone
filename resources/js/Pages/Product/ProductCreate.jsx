@@ -6,7 +6,7 @@ const ProductCreate = (props) => {
         name: '',
         price: '',
         qty: '',
-        brand: ''
+        brand: 'BOSS'
     })
 
     const handleChange = (e) => {
@@ -109,13 +109,14 @@ const ProductCreate = (props) => {
                                                         autoComplete="brand-name"
                                                         onChange={handleChange}
                                                         required
+                                                        defaultValue={data.brand}
                                                         className="mt-1 text-black text-green-600 block w-full py-2 px-3 border border-gray-300  rounded-md shadow-sm focus:outline-none focus:ring-gray-500 focus:border-gray-500 sm:text-sm"
                                                     >
-                                                        <option>Calvin Klein</option>
-                                                        <option>BOSS</option>
-                                                        <option>Gucci</option>
-                                                        <option>Samsung</option>
-                                                        <option>Apple</option>
+                                                        <option value={`Calvin Klein`}>Calvin Klein</option>
+                                                        <option  selected value={`BOSS`}>BOSS</option>
+                                                        <option value={`Gucci`}>Gucci</option>
+                                                        <option value={`Samsung`}>Samsung</option>
+                                                        <option value={`Apple`}>Apple</option>
                                                     </select>
                                                 </div>
 
@@ -125,7 +126,7 @@ const ProductCreate = (props) => {
                                     </div>
                                     <div className="flex justify-end">
                                         <Link
-                                            herf={route(`product.index`)}
+                                            href={route(`product.index`)}
                                             className=" py-2 px-4 border border-gray-300 rounded-md shadow-sm text-sm font-medium  hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                                         >
                                             Cancel

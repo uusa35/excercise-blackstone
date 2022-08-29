@@ -30,6 +30,7 @@ Route::resource('product', ProductController::class);
 Route::get('problem-solving', [ProblemSolvingController::class, 'index'])->name('problem.solving.index');
 Route::post('problem-solving', [ProblemSolvingController::class, 'store'])->name('problem.solving.store');
 Route::get('problem-solving-reset', [ProblemSolvingController::class, 'reset'])->name('problem.solving.reset');
+Route::get('download/{fileName}',[ProblemSolvingController::class,'download'])->name('problem.solving.download');
 Route::get('change-mode', function () {
     session()->put('mode', request()->mode);
     return redirect()->back();
