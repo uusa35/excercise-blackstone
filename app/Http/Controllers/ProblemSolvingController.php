@@ -37,7 +37,7 @@ class ProblemSolvingController extends Controller
             $orderCount = $element->count();
             $groups = $element->groupBy('product_name');
             $newGroup = $groups->map(fn($element) =>  $element->sum('qty'))->sortDesc();
-            $groups = $newGroup->merge($groups);
+            $groups = $newGroup->merge($groups)->take(2);
             $firstGroup = $groups->first();
             $secondGroup = $groups->last();
             $firstContent = $firstGroup[0]['product_name'] . ',' . $firstGroup->sum('qty') / $orderCount . PHP_EOL .
