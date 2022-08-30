@@ -8,7 +8,7 @@ const ProblemSolvingIndex = (props) => {
 
     const submit = (e) => {
         e.preventDefault();
-        reset('file');
+        // reset('file');
         return post(route('problem.solving.store', {
             data,
             onSuccess: () => reset('file'),

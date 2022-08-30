@@ -45,7 +45,7 @@ class ProductController extends Controller
         if ($validator->fails()) {
             return redirect()->back()->with('error', $validator->errors()->first());
         }
-        $element = Product::create($request->request->all());
+        Product::create($request->request->all());
         return redirect()->route('product.index')->with('success', 'Product Created Successfully');
     }
 
@@ -89,7 +89,7 @@ class ProductController extends Controller
         if ($validator->fails()) {
             return redirect()->back()->with('error', $validator->errors()->first());
         }
-        $element = Product::whereId($id)->first()->update($request->request->all());
+        Product::whereId($id)->first()->update($request->request->all());
         return redirect()->route('product.index')->with('success', 'Product Updated Successfully');
     }
 
@@ -101,7 +101,7 @@ class ProductController extends Controller
      */
     public function destroy($id)
     {
-        $element = Product::whereId($id)->delete();
+        Product::whereId($id)->delete();
         return redirect()->back()->with('success', 'product deleted');
     }
 }
